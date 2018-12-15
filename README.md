@@ -1,0 +1,2 @@
+# XZYYCache
+YYCache使用。
