@@ -14,6 +14,11 @@
 		9B9C1ACB21C11A7A00676477 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B9C1ACA21C11A7A00676477 /* Assets.xcassets */; };
 		9B9C1ACE21C11A7A00676477 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B9C1ACC21C11A7A00676477 /* LaunchScreen.storyboard */; };
 		9B9C1AD121C11A7A00676477 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B9C1AD021C11A7A00676477 /* main.m */; };
+		9BC0C88A21CA19F200D94EF2 /* XZCacheViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC0C88921CA19F200D94EF2 /* XZCacheViewController.m */; };
+		9BC0C88D21CA20E000D94EF2 /* XZDefinitionConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC0C88C21CA20E000D94EF2 /* XZDefinitionConstants.m */; };
+		9BC0C89321CA44D500D94EF2 /* XZPortDatasCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC0C89221CA44D500D94EF2 /* XZPortDatasCacheManager.m */; };
+		9BC0C89621CA52AB00D94EF2 /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC0C89521CA52AB00D94EF2 /* Book.m */; };
+		9BC0C89921CA5B6D00D94EF2 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC0C89821CA5B6D00D94EF2 /* UserManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,16 @@
 		9B9C1ACD21C11A7A00676477 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B9C1ACF21C11A7A00676477 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B9C1AD021C11A7A00676477 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9BC0C88821CA19F200D94EF2 /* XZCacheViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZCacheViewController.h; sourceTree = "<group>"; };
+		9BC0C88921CA19F200D94EF2 /* XZCacheViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZCacheViewController.m; sourceTree = "<group>"; };
+		9BC0C88B21CA20E000D94EF2 /* XZDefinitionConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZDefinitionConstants.h; sourceTree = "<group>"; };
+		9BC0C88C21CA20E000D94EF2 /* XZDefinitionConstants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZDefinitionConstants.m; sourceTree = "<group>"; };
+		9BC0C89121CA44D500D94EF2 /* XZPortDatasCacheManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZPortDatasCacheManager.h; sourceTree = "<group>"; };
+		9BC0C89221CA44D500D94EF2 /* XZPortDatasCacheManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZPortDatasCacheManager.m; sourceTree = "<group>"; };
+		9BC0C89421CA52AB00D94EF2 /* Book.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
+		9BC0C89521CA52AB00D94EF2 /* Book.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
+		9BC0C89721CA5B6D00D94EF2 /* UserManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserManager.h; sourceTree = "<group>"; };
+		9BC0C89821CA5B6D00D94EF2 /* UserManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserManager.m; sourceTree = "<group>"; };
 		AAEE248CA88AC819003178C5 /* Pods-XZYYCache.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XZYYCache.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XZYYCache/Pods-XZYYCache.debug.xcconfig"; sourceTree = "<group>"; };
 		D5318127034ECD908C8D9FF1 /* Pods-XZYYCache.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XZYYCache.release.xcconfig"; path = "Pods/Target Support Files/Pods-XZYYCache/Pods-XZYYCache.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,6 +92,16 @@
 				9B9C1AC221C11A6900676477 /* AppDelegate.m */,
 				9B9C1AC421C11A6900676477 /* ViewController.h */,
 				9B9C1AC521C11A6900676477 /* ViewController.m */,
+				9BC0C88821CA19F200D94EF2 /* XZCacheViewController.h */,
+				9BC0C88921CA19F200D94EF2 /* XZCacheViewController.m */,
+				9BC0C89121CA44D500D94EF2 /* XZPortDatasCacheManager.h */,
+				9BC0C89221CA44D500D94EF2 /* XZPortDatasCacheManager.m */,
+				9BC0C89421CA52AB00D94EF2 /* Book.h */,
+				9BC0C89521CA52AB00D94EF2 /* Book.m */,
+				9BC0C89721CA5B6D00D94EF2 /* UserManager.h */,
+				9BC0C89821CA5B6D00D94EF2 /* UserManager.m */,
+				9BC0C88B21CA20E000D94EF2 /* XZDefinitionConstants.h */,
+				9BC0C88C21CA20E000D94EF2 /* XZDefinitionConstants.m */,
 				9B9C1AC721C11A6900676477 /* Main.storyboard */,
 				9B9C1ACA21C11A7A00676477 /* Assets.xcassets */,
 				9B9C1ACC21C11A7A00676477 /* LaunchScreen.storyboard */,
@@ -191,8 +216,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BC0C88D21CA20E000D94EF2 /* XZDefinitionConstants.m in Sources */,
 				9B9C1AC621C11A6900676477 /* ViewController.m in Sources */,
+				9BC0C89921CA5B6D00D94EF2 /* UserManager.m in Sources */,
 				9B9C1AD121C11A7A00676477 /* main.m in Sources */,
+				9BC0C89321CA44D500D94EF2 /* XZPortDatasCacheManager.m in Sources */,
+				9BC0C88A21CA19F200D94EF2 /* XZCacheViewController.m in Sources */,
+				9BC0C89621CA52AB00D94EF2 /* Book.m in Sources */,
 				9B9C1AC321C11A6900676477 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,7 +300,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -323,7 +353,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
