@@ -31,14 +31,15 @@
       delegate:self
       cancelButtonTitle:@"Cancel"
       destructiveButtonTitle:nil
-      otherButtonTitles:@"存数据",@"取数据",@"部分删除",@"全部删除",@"存自定义数据",@"取自定义数据",nil]
+      otherButtonTitles:@"存松鼠数据",@"存兔子数据",@"取数据",@"部分删除",@"全部删除",@"存自定义数据",@"取自定义数据",nil]
      showInView:self.view];
 }
 
 #pragma mark - UIActionSheetDelegate
 -(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
     SEL selectors[] = {
-        @selector(saveStringCache),
+        @selector(saveSquirrelCache),
+        @selector(saveRabbitCache),
         @selector(getStringCache),
         @selector(removeData),
         @selector(removeAllData),
@@ -52,11 +53,16 @@
     }
 }
 
--(void)saveStringCache {
+-(void)saveSquirrelCache {
     NSString * str = @"Squirrels are native to the northeast, northwest, southeast and Europe of China and are found all over the world except Oceania. Squirrels are widely distributed throughout the cold temperate forest areas can be seen. In China, it is mainly distributed in the mountainous areas of the three northeastern provinces, northeast Inner Mongolia, north hebei and shanxi, sichuan, ningxia, gansu, xinjiang, hunan and guizhou.";
     [[XZPortDatasCacheManager sharedInstance].cache setObject:str forKey:@"squirrel"];
-    
-    str = @"Rabbits have long tubular ears (ears several times wider than ears), short tufted tails, and strong hind legs that are much longer than the forelimbs. There are 9 genera and 43 species. East, south, Africa and North America have the largest number of species. ";
+    if([[XZPortDatasCacheManager sharedInstance].cache containsObjectForKey:@"squirrel"]){
+        NSLog(@"松鼠数据存储成功!");
+    }
+}
+
+-(void)saveRabbitCache {
+   NSString *str = @"Rabbits have long tubular ears (ears several times wider than ears), short tufted tails, and strong hind legs that are much longer than the forelimbs. There are 9 genera and 43 species. East, south, Africa and North America have the largest number of species. ";
     [[XZPortDatasCacheManager sharedInstance].cache setObject:str forKey:@"rabbit" withBlock:^{
         NSLog(@"兔子数据存储成功!");
     }];

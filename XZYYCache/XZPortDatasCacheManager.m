@@ -34,9 +34,7 @@
  初始化cache
  */
 -(void)creatCache {
-    NSString *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject;
-    NSString * filePath = [path stringByAppendingPathComponent:@"cacheDatas"];
-    self.dataCache = [[YYCache alloc] initWithPath:filePath];
+    self.dataCache = [[YYCache alloc] initWithName:@"cacheData"];
 }
 
 /**

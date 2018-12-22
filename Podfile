@@ -4,4 +4,5 @@ inhibit_all_warnings!
 
 target:"XZYYCache" do
     pod 'YYCache'
+    pod 'PINCache'
 end
