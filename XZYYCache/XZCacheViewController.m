@@ -12,7 +12,7 @@
 #import "Book.h"
 
 @interface XZCacheViewController ()<UIActionSheetDelegate>
-
+@property(nonatomic,strong)UIImageView * imagPic;
 @end
 
 @implementation XZCacheViewController
@@ -23,6 +23,11 @@
     self.view.backgroundColor = [UIColor whiteColor];
     UIBarButtonItem * barButton = [[UIBarButtonItem alloc] initWithTitle:@"action" style:UIBarButtonItemStylePlain target:self action:@selector(rightButtonAction)];
     self.navigationItem.rightBarButtonItem = barButton;
+    
+    _imagPic = [[UIImageView alloc] init];
+    _imagPic.frame = CGRectMake(50.0f, 150.0f, self.view.frame.size.width-100.0f, 450.0f);
+    [self.view addSubview:_imagPic];
+    
 }
 
 -(void)rightButtonAction {
@@ -31,7 +36,7 @@
       delegate:self
       cancelButtonTitle:@"Cancel"
       destructiveButtonTitle:nil
-      otherButtonTitles:@"存松鼠数据",@"存兔子数据",@"取数据",@"部分删除",@"全部删除",@"存自定义数据",@"取自定义数据",nil]
+      otherButtonTitles:@"存松鼠数据",@"存兔子数据",@"取数据",@"部分删除",@"全部删除",@"存自定义数据",@"取自定义数据",@"存图片",@"取图片",nil]
      showInView:self.view];
 }
 
@@ -44,7 +49,9 @@
         @selector(removeData),
         @selector(removeAllData),
         @selector(saveCustomData),
-        @selector(getCustomData)
+        @selector(getCustomData),
+        @selector(savePic),
+        @selector(getPic)
     };
     
     if (buttonIndex < sizeof(selectors) / sizeof(SEL)) {
@@ -138,6 +145,24 @@
             NSLog(@"bookInfo name:%@ author:%@ publishHouse:%@ pages:%ld",book.name,book.author,book.publishHouse,book.pages);
         }
     }];
+}
+
+-(void)savePic {
+    UIImage * image = [UIImage imageNamed:@"home"];
+    [[XZPortDatasCacheManager sharedInstance].cache setObject:image forKey:@"pic" withBlock:^{
+        NSLog(@"图片保存成功");
+    }];
+}
+
+-(void)getPic {
+    if([[XZPortDatasCacheManager sharedInstance].cache containsObjectForKey:@"pic"]){
+        NSLog(@"图片数据存在！");
+        id ss = [[XZPortDatasCacheManager sharedInstance].cache objectForKey:@"pic"];
+        _imagPic.image = (UIImage*)ss;
+        NSLog(@"pic - %@",ss);
+    }else {
+        NSLog(@"图片数据不存在！");
+    }
 }
 
 @end
